@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Game Edukatif Vulkanisme</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="page1" class="page active">
+    <h1>VULKANISME</h1>
+    <button class="button" onclick="nextPage(2)">Start</button>
+  </div>
+
+  <div id="page2" class="page">
+    <h2>Cocokkan Tipe Vulkanisme ke Gambar</h2>
+    <div id="choices">
+      <div class="draggable" draggable="true" id="tipeHawaii">Tipe Hawaii</div>
+      <div class="draggable" draggable="true" id="tipeSaint">Tipe Saint-Vincent</div>
+      <div class="draggable" draggable="true" id="tipeVulkano">Tipe Vulkano</div>
+      <div class="draggable" draggable="true" id="tipePerret">Tipe Perret</div>
+    </div>
+    <div id="images">
+      <div class="dropzone" data-answer="tipeSaint" style="background-image: url('gambar2.jpg')"></div>
+      <div class="dropzone" data-answer="tipePerret" style="background-image: url('gambar3.jpg')"></div>
+      <div class="dropzone" data-answer="tipeHawaii" style="background-image: url('gambar4.jpg')"></div>
+      <div class="dropzone" data-answer="tipeVulkano" style="background-image: url('gambar5.jpg')"></div>
+    </div>
+    <button class="button" onclick="checkMatches()">Input</button>
+    <div id="resultPage2"></div>
+    <button id="nextButton2" class="button" style="display:none" onclick="nextPage(3)">Next</button>
+  </div>
+
+  <div id="page3" class="page">
+    <h2>Urutkan Proses Intrusi Magma</h2>
+    <img src="gambar6.jpg" alt="Proses Vulkanisme" style="width: 80%; max-width: 600px;">
+    <div id="sortableList" class="sortable">
+      <div class="draggable" draggable="true">Lakolit</div>
+      <div class="draggable" draggable="true">Intrusi Gang Kecil</div>
+      <div class="draggable" draggable="true">Batolit</div>
+      <div class="draggable" draggable="true">Intrusi Gang</div>
+      <div class="draggable" draggable="true">Sill</div>
+      <div class="draggable" draggable="true">Diaterma</div>
+      <div class="draggable" draggable="true">Lapolit</div>
+    </div>
+    <button class="button" onclick="checkOrder()">Input</button>
+    <div id="resultPage3"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
